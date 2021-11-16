@@ -13,7 +13,7 @@ I gathered manufacturer provided details for board games, along with historical 
 
 Data
 
-All data was scraped from https://boardgamegeek.com/ . I gathered data for the top 3000 games by rating, gather 16 different features per game in all. After cleaning the data and removing null values I was able to start modeling with 1372 observations. The features gathered are a mix of manufacturer provided game information, professional ratings, user voted features and historical website data on views.
+All data was scraped from https://boardgamegeek.com/ . I gathered data for the top 3000 games, by rating, with 16 different features per game in all. After cleaning the data and removing null values I was able to start modeling with 1372 observations. The features gathered are a mix of manufacturer provided game information, professional ratings, user voted features and historical website data on views.
 
 Algorithms
 
@@ -26,11 +26,11 @@ Feature Engineering:
 
 Models
 
-I split the data into training + validation data (80%) and test data (20%). I used a K-Fold validation method to test between linear, Ridge and polynomial regression models, using the training/validation data from above. After finding the mean R2 score for each model, for each K-Fold validation, with 100 random subsets of training and validation data, a simple linear regression model with a single polynomial term added for ‘minutes’ yielded the best score.
+I split the data into training + validation data (80%) and test data (20%). I used a K-Fold validation method to test between linear, Ridge and polynomial regression models, using the training/validation data from above. After finding the mean R-Square score for each model, for each K-Fold validation, with 100 random subsets of training and validation data, a simple linear regression model with a single polynomial term added for ‘minutes’ yielded the best score.
 
 Findings
 
-The training data yielded an adjusted R2 of 0.749, with the K-Fold cross validation yielding a score of 0.744, so the model works well to predict about 74% of the variance in game complexity scores. When I tested this model using the test data it had not seen the test R2 was 0.705. The main metric of interest though is the Mean Absolute Error (MAE) in this final model which is 0.807. This means that on average, the model prediction will be off by 0.807. For complexity scores between 1 and 3 the MAE is much lower as the variance of the errors is also lower.
+The training data yielded an adjusted R-Square score of 0.749, with the K-Fold cross validation yielding a score of 0.744. The model works well to predict about 74% of the variance in game complexity scores. When I tested this model using the test data it had not seen the R-Square score was 0.705. The main metric of interest though is the Mean Absolute Error (MAE), which, in this final model is 0.807. This means that on average, the model prediction will be off by 0.807. For complexity scores between 1 and 3 the MAE is much lower as the variance of the errors is also lower.
 
 The most import features and their coefficients in the final model are:			     
 Geek Rating: 0.1069***                                               				                       
@@ -44,8 +44,8 @@ Tools
 
 •	Selenium and BeautifulSoup Python packages for html retrieval and parsing
 
-
 •	Pandas, Numpy, StatsModel and SciKitLearn Python packages for data cleaning and modeling
+
 •	Matplotlib and Seaborn Python packages for data visualization
 
 
