@@ -16,6 +16,8 @@ Data
 
 All data was scraped from https://boardgamegeek.com/ . I gathered data for the top 3000 games, by rating, with 16 different features per game in all. After cleaning the data and removing null values I was able to start modeling with 1372 observations. The features gathered are a mix of manufacturer provided game information, professional ratings, user voted features and historical website data on views.
 
+![](https://github.com/DerekCall/linear_regression_metis/blob/main/Screenshot%202024-02-21%20at%208.40.41%20PM.png?raw=true)
+
 Algorithms
 
 I used the Selenium package in Python to grab the html data from each individual game’s landing page. I then parsed the html data in Python using the BeautifulSoup package.
