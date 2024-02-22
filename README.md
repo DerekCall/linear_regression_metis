@@ -2,6 +2,7 @@
 
 ## Weeks 2 and 3 in Metis Data Science and Engineering Bootcamp
 
+![](https://github.com/DerekCall/linear_regression_metis/blob/main/Screenshot%202024-02-21%20at%208.35.43%20PM.png?raw=true)
 
 Abstract
 
